@@ -5,7 +5,6 @@ import ChildhoodCancerSection from '../components/ChildAwareSection';
 import CancerFocusSection from '../components/KeyFocusArea';
 import ArticlesSection from '../components/ArticlesSection';
 import VolunteerSection from '../components/VolunteerSection';
-import Footer from '../components/Footer';
 
 const Homepage = () => {
   return (
@@ -23,10 +22,8 @@ const Homepage = () => {
 
         <VolunteerSection/>
 
-        <Footer/>
  
 
-      {/* Impact Statistics */}
     </div>
   );
 };

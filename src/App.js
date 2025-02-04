@@ -7,12 +7,17 @@ import AboutPage from './pages/AboutPage';
 import GetHelpPage from './pages/GetHelpPage';
 import InsightsPage from './pages/InsightsPage';
 import DonatePage from './pages/DonatePage';
-
+import WhyCancerPage from './pages/WhyCancer';
+import GovernanceSection from './pages/GovernancePage';
+import WhatIsCancerPage from './pages/WhatIsCancerPage';
+import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 function App() {
   return (
     <Router basename="/">
       {/* Navbar is now outside of Routes to remain consistent across pages */}
       <Navbar />
+      <ScrollToTop /> {/* This ensures scroll position resets on route change */}
 
       {/* Add padding to the top of the main content to account for fixed navbar */}
       <div className="pt-16 mt-3"> {/* Adjust pt-20 based on actual navbar height */}
@@ -22,13 +27,13 @@ function App() {
 
             {/* About Routes */}
             <Route path="/about">
-              <Route path="why-cancer" element={<AboutPage section="why-cancer" />} />
-              <Route path="governance" element={<AboutPage section="governance" />} />
+              <Route path="why-cancer" element={<WhyCancerPage section="why-cancer" />} />
+              <Route path="governance" element={<GovernanceSection section="governance" />} />
             </Route>
 
             {/* Understanding Cancer Routes */}
             <Route path="/understanding">
-              <Route path="what-is-cancer" element={<AboutPage section="what-is-cancer" />} />
+              <Route path="what-is-cancer" element={<WhatIsCancerPage section="what-is-cancer" />} />
               <Route path="signs-symptoms" element={<AboutPage section="signs-symptoms" />} />
             </Route>
 
@@ -49,6 +54,9 @@ function App() {
           </Routes>
         </AnimatePresence>
       </div>
+
+      <Footer/>
+      
     </Router>
   );
 }
