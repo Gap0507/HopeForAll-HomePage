@@ -24,6 +24,7 @@ import bcancer from '../assets/bcancer.jpg'
 import lungcancer from '../assets/lungcancer.jpg'
 import colorectalCancer from '../assets/colorectalCancer.jpg'
 import LiverCancer from '../assets/LiverCancer.jpg'
+
 const WhatIsCancerPage = () => {
   const [activeSection, setActiveSection] = useState('introduction');
   const [selectedResource, setSelectedResource] = useState(null);

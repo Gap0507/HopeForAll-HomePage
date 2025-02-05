@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Users, TrendingUp, Shield, Heart, Globe, Activity, BarChart, Clock, HandHeart, BrainCircuit, Building } from 'lucide-react';
-
 const WhyCancerPage = () => {
   const statistics = [
     {

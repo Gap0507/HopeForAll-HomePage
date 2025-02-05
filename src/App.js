@@ -12,6 +12,8 @@ import GovernanceSection from './pages/GovernancePage';
 import WhatIsCancerPage from './pages/WhatIsCancerPage';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import SignsSymptomPage from './pages/SignsSymptoms';
+import VolunteersPage from './pages/VolunteersPage';
 function App() {
   return (
     <Router basename="/">
@@ -34,12 +36,12 @@ function App() {
             {/* Understanding Cancer Routes */}
             <Route path="/understanding">
               <Route path="what-is-cancer" element={<WhatIsCancerPage section="what-is-cancer" />} />
-              <Route path="signs-symptoms" element={<AboutPage section="signs-symptoms" />} />
+              <Route path="signs-symptoms" element={<SignsSymptomPage section="signs-symptoms" />} />
             </Route>
 
             {/* Get Involved Routes */}
             <Route path="/get-involved">
-              <Route path="volunteers" element={<AboutPage section="volunteers" />} />
+              <Route path="volunteers" element={<VolunteersPage section="volunteers" />} />
               <Route path="collaborate" element={<AboutPage section="collaborate" />} />
               <Route path="contact" element={<AboutPage section="contact" />} />
             </Route>
