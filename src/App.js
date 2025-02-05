@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import SignsSymptomPage from './pages/SignsSymptoms';
 import VolunteersPage from './pages/VolunteersPage';
+import CollaboratePage from './pages/ColloboratePage';
 function App() {
   return (
     <Router basename="/">
@@ -42,7 +43,7 @@ function App() {
             {/* Get Involved Routes */}
             <Route path="/get-involved">
               <Route path="volunteers" element={<VolunteersPage section="volunteers" />} />
-              <Route path="collaborate" element={<AboutPage section="collaborate" />} />
+              <Route path="collaborate" element={<CollaboratePage section="collaborate" />} />
               <Route path="contact" element={<AboutPage section="contact" />} />
             </Route>
 

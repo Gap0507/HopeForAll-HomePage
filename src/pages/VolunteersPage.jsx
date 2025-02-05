@@ -67,71 +67,70 @@ const VolunteersPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-indigo-900 to-gray-900 text-white">
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="max-w-6xl mx-auto px-4 md:px-8 py-20 md:py-32 relative z-10"
-        >
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-              <span className="inline-block px-4 py-2 rounded-full bg-blue-500/20 text-blue-200 text-sm font-medium mb-4">
-                Join Our Cause
-              </span>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Make a <span className="text-blue-400">Difference</span>
-              </h1>
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                Volunteer with Hope for All and help support those affected by cancer. Your commitment brings hope and change.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setShowForm(true)}
-                  className="px-8 py-4 bg-blue-500 text-white rounded-xl font-medium hover:bg-blue-600 transition-colors"
+        <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-purple-50 to-blue-50">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="max-w-6xl mx-auto px-4 md:px-8 py-20 md:py-32 relative z-10"
+      >
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            <span className="inline-block px-4 py-2 rounded-full bg-purple-100 text-purple-700 text-sm font-medium mb-4">
+              Join Our Cause
+            </span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-gray-900">
+              Make a <span className="text-purple-600">Difference</span>
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              Volunteer with Hope for All and help support those affected by cancer. Your commitment brings hope and change.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setShowForm(true)}
+                className="px-8 py-4 bg-purple-600 text-white rounded-xl font-medium hover:bg-purple-700 transition-colors"
+              >
+                Become a Volunteer
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-transparent text-purple-700 rounded-xl font-medium border-2 border-purple-300 hover:bg-purple-50 transition-colors"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.4 }}
+            className="relative hidden md:block"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-200/40 to-blue-200/40 rounded-full blur-3xl" />
+            <div className="relative z-10 grid grid-cols-2 gap-4">
+              {impactStats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6 + index * 0.1 }}
+                  className="bg-white/80 backdrop-blur-lg rounded-xl p-6 text-center shadow-lg"
                 >
-                  Become a Volunteer
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-transparent text-white rounded-xl font-medium border-2 border-blue-400 hover:bg-blue-400/10 transition-colors"
-                >
-                  Learn More
-                </motion.button>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4 }}
-              className="relative hidden md:block"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl" />
-              <div className="relative z-10 grid grid-cols-2 gap-4">
-                {impactStats.map((stat, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6 + index * 0.1 }}
-                    className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center"
-                  >
-                    <div className="text-3xl font-bold text-blue-300 mb-2">{stat.number}</div>
-                    <div className="text-sm text-blue-100">{stat.label}</div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
+                  <div className="text-3xl font-bold text-purple-600 mb-2">{stat.number}</div>
+                  <div className="text-sm text-gray-600">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </motion.div>
+    </section>
 
       {/* Volunteer Opportunities Section */}
       <section className="px-4 md:px-8 py-16">

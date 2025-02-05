@@ -127,71 +127,75 @@ const WhatIsCancerPage = () => {
 
   return (
 <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Redesigned Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-indigo-900 to-gray-900 text-white">
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="max-w-6xl mx-auto px-4 md:px-8 py-20 md:py-32 relative z-10"
-        >
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-              <span className="inline-block px-4 py-2 rounded-full bg-blue-500/20 text-blue-200 text-sm font-medium mb-4">
-                Comprehensive Guide
-              </span>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Understanding <span className="text-blue-400">Cancer</span>
-              </h1>
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                Explore our comprehensive guide to understanding cancer, its impact, and the latest advances in treatment and care.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-blue-500 text-white rounded-xl font-medium hover:bg-blue-600 transition-colors"
-                >
-                  Start Learning
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-transparent text-white rounded-xl font-medium border-2 border-blue-400 hover:bg-blue-400/10 transition-colors"
-                >
-                  Find Support
-                </motion.button>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4 }}
-              className="relative hidden md:block"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl" />
-              <img 
-                src= {heromain} 
-                alt="Medical Research" 
-                className="relative z-10 rounded-2xl shadow-2xl"
-              />
-            </motion.div>
-          </div>
-        </motion.div>
-        
-        {/* Abstract background elements */}
-        <motion.div 
-          className="absolute top-0 left-0 w-full h-full opacity-30"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.3 }}
-        >
-          <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-br from-blue-500/20 to-transparent rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-full blur-3xl" />
-        </motion.div>
-      </section>
+<section className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-purple-50 to-blue-50">
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="max-w-6xl mx-auto px-4 md:px-8 py-20 md:py-32 relative z-10"
+      >
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            <span className="inline-block px-4 py-2 rounded-full bg-purple-100 text-purple-700 text-sm font-medium mb-4">
+              Comprehensive Guide
+            </span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-gray-900">
+              Understanding <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Cancer</span>
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              Explore our comprehensive guide to understanding cancer, its impact, and the latest advances in treatment and care.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all"
+              >
+                Start Learning
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-white text-gray-700 rounded-xl font-medium border border-gray-200 hover:bg-gray-50 hover:shadow-md transition-all"
+              >
+                Find Support
+              </motion.button>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.4 }}
+            className="relative hidden md:block"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-200/50 to-blue-200/50 rounded-full blur-3xl" />
+            <img 
+              src={heromain}
+              alt="Medical Research" 
+              className="relative z-10 rounded-2xl shadow-xl"
+            />
+          </motion.div>
+        </div>
+      </motion.div>
+      
+      {/* Abstract background elements */}
+      <motion.div 
+        className="absolute top-0 left-0 w-full h-full opacity-50"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.5 }}
+      >
+        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-br from-purple-200/30 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-blue-200/30 to-transparent rounded-full blur-3xl" />
+      </motion.div>
+
+      {/* Decorative elements */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[linear-gradient(30deg,#f8fafc_12%,transparent_12.5%,transparent_87.5%,#f8fafc_87.5%,#f8fafc),linear-gradient(150deg,#f8fafc_12%,transparent_12.5%,transparent_87.5%,#f8fafc_87.5%,#f8fafc)] bg-[size:64px_128px] opacity-30"></div>
+      </div>
+    </section>
 
       {/* Interactive Quick Facts Section */}
       <section className="px-4 md:px-8 py-16">
